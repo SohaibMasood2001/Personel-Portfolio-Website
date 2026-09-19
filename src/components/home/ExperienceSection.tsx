@@ -35,10 +35,10 @@ const experiences: ExperienceItem[] = [
       "Designed low-code automation workflows in n8n connecting cloud services, APIs, and backend systems end-to-end.",
       "Combined deterministic RPA with LLM reasoning for intelligent document processing, classification, and exception handling.",
       "Applied RAG pipelines, structured outputs, and guardrails to keep agent responses accurate and production-safe.",
-      "Currently fine-tuning PP-OCRv4 on a custom 24K-image dataset of specific font styles — running the full training pipeline from data preprocessing, model training, and evaluation to deployment-ready export.",
+      "Currently fine-tuning custom Vision Models on domain-specific datasets — running the full training pipeline from data preprocessing, model training, and evaluation to deployment-ready export.",
       "Set up logging, retry logic, and production monitoring so AI services stay reliable under real workloads.",
     ],
-    techTags: ["Claude (MCP & Agents)", "Vapi Voice AI", "n8n Workflows", "PP-OCRv4 / Custom OCR", "UiPath RPA", "OpenAI", "Multi-Agent Pipelines", "PaddleOCR"],
+    techTags: ["Claude (MCP & Agents)", "Vapi Voice AI", "n8n Workflows", "Vision Models", "UiPath RPA", "OpenAI", "Multi-Agent Pipelines", "Reasoning Models"],
   },
   {
     role: "Automation Engineer Intern",
@@ -62,12 +62,12 @@ const experiences: ExperienceItem[] = [
     type: "work",
     badge: "LLM & RAG",
     highlights: [
-      "Built intelligent LLM applications and modern conversational systems using Claude, DeepSeek R1, FAISS vector search, and Hugging Face Transformers.",
+      "Built intelligent LLM applications and modern conversational systems using Claude, advanced Reasoning Models, FAISS vector search, and open-source Transformers.",
       "Integrated RAG pipelines and FAISS vector search to power domain-specific document QA chatbots.",
       "Deployed deep learning inference models for NLP tasks (classification, NER, speech) via Flask REST APIs.",
-      "Built disease detection classifiers using Keras/TensorFlow as part of applied ML experimentation.",
+      "Built disease detection classifiers using deep learning frameworks as part of applied ML experimentation.",
     ],
-    techTags: ["Claude & DeepSeek", "RAG Systems", "Hugging Face", "FAISS", "Flask", "Transformers", "Keras"],
+    techTags: ["Claude", "Reasoning Models", "RAG Systems", "FAISS", "Flask", "Transformers", "Keras"],
   },
   {
     role: "BS Software Engineering",

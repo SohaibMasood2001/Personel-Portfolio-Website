@@ -13,11 +13,11 @@ const skillCategories = [
     title: "Primary: Agentic AI & Modern LLMs",
     icon: Brain,
     skills: [
-      { name: "Claude 3.7 / 3.5 & Model Context Protocol (MCP)", level: 96 },
-      { name: "Custom OCR Fine-Tuning (PP-OCRv4 / PaddleOCR)", level: 94 },
+      { name: "Claude & Model Context Protocol (MCP)", level: 96 },
+      { name: "Vision Model Fine-Tuning & Custom Datasets", level: 94 },
       { name: "Vapi Real-Time Voice Agents & Tool Calling", level: 92 },
-      { name: "DeepSeek R1 / V3 & Reasoning Engines", level: 92 },
-      { name: "Advanced RAG & Vector Retrieval (FAISS)", level: 90 },
+      { name: "Reasoning Models & Advanced LLM Pipelines", level: 92 },
+      { name: "Advanced RAG & Vector Retrieval", level: 90 },
     ],
   },
   {

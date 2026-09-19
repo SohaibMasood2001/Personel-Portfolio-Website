@@ -71,7 +71,7 @@ export const defaultServices: ServiceData[] = [
     icon: "Workflow",
     title: "LLM, RAG & Fine-Tuning",
     description:
-      "Build high-precision RAG systems with Claude MCP, DeepSeek R1, FAISS, and vector search. Fine-tune domain-specific models — including custom OCR models like PP-OCRv4 on custom font datasets.",
+      "Build high-precision RAG systems with Claude MCP, advanced Reasoning Models, vector search, and structured retrieval. Fine-tune domain-specific Vision Models for classification, document understanding, and custom datasets.",
     accent: "#D4A853",
   },
   {

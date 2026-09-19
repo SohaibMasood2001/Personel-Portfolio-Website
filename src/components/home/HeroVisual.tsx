@@ -14,7 +14,7 @@ const codeTabs = [
       { num: 2, tokens: [{ text: "from ", color: "text-[#E8536A]" }, { text: "aws_bedrock ", color: "text-[#38BDF8]" }, { text: "import ", color: "text-[#E8536A]" }, { text: "BedrockRuntime", color: "text-[#D4A853]" }] },
       { num: 3, tokens: [{ text: "", color: "text-text-primary" }] },
       { num: 4, tokens: [{ text: "class ", color: "text-[#E8536A]" }, { text: "VoiceAgentEngine", color: "text-[#D4A853]" }, { text: ":", color: "text-text-primary" }] },
-      { num: 5, tokens: [{ text: "    def __init__(self, model=\"deepseek-r1\"):", color: "text-text-secondary" }] },
+      { num: 5, tokens: [{ text: "    def __init__(self, model=\"claude-3-7-sonnet\"):", color: "text-text-secondary" }] },
       { num: 6, tokens: [{ text: "        self.voice = vapi.Client()", color: "text-[#34D399]" }] },
       { num: 7, tokens: [{ text: "        self.mcp = ClaudeMCPClient(tools=SYSTEM_TOOLS)", color: "text-[#34D399]" }] },
       { num: 8, tokens: [{ text: "", color: "text-text-primary" }] },
