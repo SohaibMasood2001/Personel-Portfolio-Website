@@ -1,20 +1,20 @@
-# Brenthix Labs Admin MCP
+# Personal Portfolio Admin MCP
 
-Local stdio MCP server so any MCP client can manage the Brenthix Labs site the same way the admin UI does. Cursor and Claude Desktop are the usual clients.
+Local stdio MCP server so any MCP client can manage the portfolio site the same way the admin UI does. Cursor and Claude Desktop are the usual clients.
 
 ## Prerequisites
 
 1. Next.js app running (`npm run dev` in repo root).
 2. Matching API key in **both** places:
 
-**`agentic-portfolio/.env`**
+**`.env`**
 ```env
 MCP_ADMIN_API_KEY=your-long-random-secret-at-least-16-chars
 ```
 
 **MCP client env** (same value in Cursor, Claude Desktop, or another client):
 ```env
-BRENTHIX_API_BASE_URL=http://localhost:3000
+PORTFOLIO_API_BASE_URL=http://localhost:3000
 MCP_ADMIN_API_KEY=your-long-random-secret-at-least-16-chars
 ```
 
@@ -38,13 +38,13 @@ Use an **absolute path** to `dist/index.js`:
 ```json
 {
   "mcpServers": {
-    "brenthix-admin": {
+    "portfolio-admin": {
       "command": "node",
       "args": [
-        "D:/Projects/Advance Agentic Apps/Agentic Portfolio Website/agentic-portfolio/mcp/dist/index.js"
+        "D:/Projects/Advance Agentic Apps/Personel Portfolio Website/mcp/dist/index.js"
       ],
       "env": {
-        "BRENTHIX_API_BASE_URL": "http://localhost:3000",
+        "PORTFOLIO_API_BASE_URL": "http://localhost:3000",
         "MCP_ADMIN_API_KEY": "your-long-random-secret-at-least-16-chars"
       }
     }

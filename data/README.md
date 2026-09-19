@@ -1,13 +1,13 @@
 # Portfolio seed dump
 
-`portfolio-seed.json` is the full Brenthix Labs catalog: 9 projects, site settings, and CMS sections (services, process, FAQs, about, tech chips).
+`portfolio-seed.json` is the full personal portfolio catalog for **Sohaib Masood**: 5 projects, site settings, and CMS sections (services, process, FAQs, about, tech chips).
 
-Use this file to load the same content into a local SQLite database or a hosted one.
+Use this file to load the same content into a local SQLite database or a hosted Neon Postgres database.
 
 ## What is in the JSON
 
 - `projects`: title, slug, copy, tech stack (array), features (array), GitHub URL, live URL, architecture diagram object
-- `settings`: company name, hero, about, contact, GitHub
+- `settings`: portfolio owner name, hero, about, contact, GitHub, LinkedIn
 - `siteContent`: homepage CMS blocks
 
 ## Import options

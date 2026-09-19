@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "prisma generate && next dev",
     "build": "prisma generate --schema=prisma/schema.postgres.prisma && prisma db push --schema=prisma/schema.postgres.prisma && next build",
+    "build:local": "prisma generate && next build",
     "start": "next start",
     "lint": "eslint",
     "db:push": "prisma db push",
@@ -14,6 +15,8 @@
     "db:neon:push": "prisma generate --schema=prisma/schema.postgres.prisma && prisma db push --schema=prisma/schema.postgres.prisma",
     "db:neon:setup": "npx tsx scripts/neon-setup.ts",
     "seed:export": "npx tsx scripts/build-portfolio-seed.ts",
+    "mcp:build": "npm install --prefix mcp && npm run build --prefix mcp",
+    "mcp:dev": "npm run dev --prefix mcp",
     "postinstall": "prisma generate"
   },
   "prisma": {

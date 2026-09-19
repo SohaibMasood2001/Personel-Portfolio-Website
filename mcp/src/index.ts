@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Brenthix Labs Admin MCP — stdio server.
+ * Personal Portfolio Admin MCP — stdio server.
  * Talks to the running Next.js app via Bearer MCP_ADMIN_API_KEY.
  * GitHub: PR-only via `gh` (never push to main).
  */
@@ -20,10 +20,11 @@ const REPO_ROOT = path.resolve(MCP_ROOT, "..");
 const EXPORTS_DIR = path.join(MCP_ROOT, "exports");
 
 function baseUrl() {
-  return (process.env.BRENTHIX_API_BASE_URL || "http://localhost:3000").replace(
-    /\/$/,
-    ""
-  );
+  return (
+    process.env.PORTFOLIO_API_BASE_URL ||
+    process.env.BRENTHIX_API_BASE_URL ||
+    "http://localhost:3000"
+  ).replace(/\/$/, "");
 }
 
 function apiKey() {
@@ -80,13 +81,13 @@ function textResult(data: unknown) {
 }
 
 const server = new McpServer({
-  name: "brenthix-admin",
+  name: "portfolio-admin",
   version: "1.0.0",
 });
 
 server.tool(
   "list_tools_help",
-  "Summarize Brenthix Labs admin MCP tools and safety rules",
+  "Summarize Portfolio admin MCP tools and safety rules",
   {},
   async () =>
     textResult({
@@ -417,7 +418,7 @@ server.tool(
     const prTitle = title || "CMS content export";
     const prBody =
       body ||
-      "## Summary\n- Exported site settings/content snapshot from Brenthix Labs admin MCP\n\n## Notes\n- Auto-generated; review before merge\n";
+      "## Summary\n- Exported site settings/content snapshot from Portfolio admin MCP\n\n## Notes\n- Auto-generated; review before merge\n";
 
     const { stdout } = await execFileAsync(
       "gh",

@@ -1,10 +1,10 @@
 {
-  "name": "brenthix-admin-mcp",
+  "name": "portfolio-admin-mcp",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "bin": {
-    "brenthix-admin-mcp": "./dist/index.js"
+    "portfolio-admin-mcp": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",

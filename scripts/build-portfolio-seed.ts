@@ -41,7 +41,7 @@ function main() {
 
   const dump = {
     version: 2,
-    name: "brenthix-labs-portfolio",
+    name: "sohaib-masood-portfolio",
     exportedAt: new Date().toISOString(),
     note: "Import this JSON into any database. projects.techStack, features, screenshots, and guardrails are arrays. siteContent.data is already parsed JSON. For the Prisma SQLite schema, stringify techStack, features, screenshots, guardrails, and architecture, and stringify siteContent.data.",
     projects,
@@ -54,7 +54,7 @@ function main() {
   writeFileSync(jsonPath, JSON.stringify(dump, null, 2) + "\n", "utf8");
 
   const sql: string[] = [
-    "-- Brenthix Labs portfolio dump. SQLite first.",
+    "-- Sohaib Masood personal portfolio dump. SQLite first.",
     "BEGIN;",
     `CREATE TABLE IF NOT EXISTS "Project" (
   "id" TEXT PRIMARY KEY,

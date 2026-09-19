@@ -1,4 +1,8 @@
 {
+  "version": 2,
+  "name": "sohaib-masood-portfolio",
+  "exportedAt": "2026-09-19T10:18:25.827Z",
+  "note": "Import this JSON into any database. projects.techStack, features, screenshots, and guardrails are arrays. siteContent.data is already parsed JSON. For the Prisma SQLite schema, stringify techStack, features, screenshots, guardrails, and architecture, and stringify siteContent.data.",
   "projects": [
     {
       "title": "AgriConnect",
@@ -35,8 +39,14 @@
       ],
       "screenshots": [],
       "thumbnail": "/thumbs/agriconnect.png",
-      "githubUrl": "https://github.com/sohaibmasood",
+      "githubUrl": null,
       "liveUrl": "https://agriconnect-agentic-platform-frontend.onrender.com",
+      "status": "live",
+      "featured": true,
+      "accentColor": "#10B981",
+      "architectureFallback": "Django Backend → Keras Model → Marketplace UI",
+      "category": "web",
+      "order": 1,
       "demoVideoUrl": null,
       "proofAsset": null,
       "guardrails": [
@@ -44,12 +54,102 @@
         "human-confirm",
         "audit-ledger"
       ],
-      "status": "live",
-      "featured": true,
-      "accentColor": "#10B981",
-      "architecture": "Django Backend → Keras Model → Marketplace UI",
-      "category": "web",
-      "order": 1
+      "architecture": {
+        "title": "How AgriConnect works",
+        "layers": [
+          [
+            {
+              "id": "storefront",
+              "title": "Shop website",
+              "detail": "For buyers",
+              "items": [
+                "Browse crops and machines",
+                "Add to cart and pay"
+              ]
+            },
+            {
+              "id": "mcp-entry",
+              "title": "Helper bots",
+              "detail": "For operators",
+              "items": [
+                "Ask a bot to buy or rent",
+                "Same rules as the website"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "roles",
+              "title": "Who can do what",
+              "items": [
+                "Buyers, farmers, workers",
+                "Each sees the right tools"
+              ]
+            },
+            {
+              "id": "commerce",
+              "title": "Orders and bookings",
+              "items": [
+                "Checkout and delivery status",
+                "Rent machines or book land"
+              ]
+            },
+            {
+              "id": "wallet",
+              "title": "Payments",
+              "items": [
+                "Wallet and deals",
+                "Clear payment history"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "agent-market",
+              "title": "Bot actions",
+              "items": [
+                "Buy, rent, hire, pay",
+                "Works like a careful assistant"
+              ]
+            },
+            {
+              "id": "agent-ai",
+              "title": "Smart checks",
+              "items": [
+                "Spot plant disease",
+                "Suggest fair prices"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "sqlite",
+              "title": "Saved records",
+              "items": [
+                "Products and orders",
+                "Photos and files"
+              ]
+            },
+            {
+              "id": "disease-ai",
+              "title": "Plant scan",
+              "items": [
+                "Reads a leaf photo",
+                "Returns a simple result"
+              ]
+            },
+            {
+              "id": "harden",
+              "title": "Security",
+              "items": [
+                "Passwords and access limits",
+                "Secrets stay off the public site"
+              ]
+            }
+          ]
+        ],
+        "note": "People and helper bots share the same shop rules from start to finish."
+      }
     },
     {
       "title": "Smart AI Doctor",
@@ -85,17 +185,18 @@
       ],
       "screenshots": [],
       "thumbnail": "/thumbs/medcare.png",
-      "githubUrl": "https://github.com/sohaibmasood",
+      "githubUrl": null,
       "liveUrl": null,
-      "demoVideoUrl": null,
-      "proofAsset": null,
-      "guardrails": [],
       "status": "live",
       "featured": true,
       "accentColor": "#0EA5E9",
-      "architecture": "Voice Input → DeepSeek R1 Engine → Structured Clinical Triage",
+      "architectureFallback": "Voice Input → DeepSeek R1 Engine → Structured Clinical Triage",
       "category": "ai-agent",
-      "order": 2
+      "order": 2,
+      "demoVideoUrl": null,
+      "proofAsset": null,
+      "guardrails": [],
+      "architecture": "Voice Input → DeepSeek R1 Engine → Structured Clinical Triage"
     },
     {
       "title": "Smart Islamic Guider",
@@ -131,17 +232,18 @@
       ],
       "screenshots": [],
       "thumbnail": "/thumbs/islamic_guider.png",
-      "githubUrl": "https://github.com/sohaibmasood",
+      "githubUrl": null,
       "liveUrl": null,
-      "demoVideoUrl": null,
-      "proofAsset": null,
-      "guardrails": [],
       "status": "live",
       "featured": true,
       "accentColor": "#D4A853",
-      "architecture": "Query → Vector Retrieval (FAISS) → LLaMA 3 (Groq) → Grounded Answer",
+      "architectureFallback": "Query → Vector Retrieval (FAISS) → LLaMA 3 (Groq) → Grounded Answer",
       "category": "ai-agent",
-      "order": 3
+      "order": 3,
+      "demoVideoUrl": null,
+      "proofAsset": null,
+      "guardrails": [],
+      "architecture": "Query → Vector Retrieval (FAISS) → LLaMA 3 (Groq) → Grounded Answer"
     },
     {
       "title": "AI Automation Suite",
@@ -178,17 +280,18 @@
       ],
       "screenshots": [],
       "thumbnail": "/thumbs/automation.png",
-      "githubUrl": "https://github.com/sohaibmasood",
+      "githubUrl": null,
       "liveUrl": null,
-      "demoVideoUrl": null,
-      "proofAsset": null,
-      "guardrails": [],
       "status": "live",
       "featured": true,
       "accentColor": "#E8536A",
-      "architecture": "Voice Agent / MCP / n8n → LLM Reasoning → UiPath RPA → Business Platform",
+      "architectureFallback": "Voice Agent / MCP / n8n → LLM Reasoning → UiPath RPA → Business Platform",
       "category": "automation",
-      "order": 4
+      "order": 4,
+      "demoVideoUrl": null,
+      "proofAsset": null,
+      "guardrails": [],
+      "architecture": "Voice Agent / MCP / n8n → LLM Reasoning → UiPath RPA → Business Platform"
     },
     {
       "title": "DualHire",
@@ -220,8 +323,14 @@
       ],
       "screenshots": [],
       "thumbnail": "/thumbs/dualhire.png",
-      "githubUrl": "https://github.com/sohaibmasood",
+      "githubUrl": null,
       "liveUrl": null,
+      "status": "live",
+      "featured": false,
+      "accentColor": "#3B82F6",
+      "architectureFallback": "Candidate Agent ↔ Company Screener ↔ Scheduled Interview",
+      "category": "ai-agent",
+      "order": 5,
       "demoVideoUrl": null,
       "proofAsset": null,
       "guardrails": [
@@ -230,12 +339,77 @@
         "audit-ledger",
         "resumable"
       ],
-      "status": "live",
-      "featured": false,
-      "accentColor": "#3B82F6",
-      "architecture": "Candidate Agent ↔ Company Screener ↔ Scheduled Interview",
-      "category": "ai-agent",
-      "order": 5
+      "architecture": {
+        "title": "How DualHire works",
+        "layers": [
+          [
+            {
+              "id": "landing",
+              "title": "Your dashboard",
+              "items": [
+                "Sign in as talent or company",
+                "See job matches"
+              ]
+            },
+            {
+              "id": "live-hub",
+              "title": "Live view",
+              "items": [
+                "Watch the two agents talk",
+                "See the final outcome"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "auth-match",
+              "title": "Find a fit",
+              "items": [
+                "Match people to jobs",
+                "Keep profiles safe"
+              ]
+            },
+            {
+              "id": "a2a",
+              "title": "Agent talk",
+              "items": [
+                "Candidate agent ↔ company agent",
+                "Agree score and interview time"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "bridge",
+              "title": "Apply for you",
+              "items": [
+                "Opens the career site safely",
+                "Submits the agreed packet",
+                "Rate limits and CSRF guards"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "northbridge",
+              "title": "Northbridge Careers",
+              "items": [
+                "Career board",
+                "Takes the application"
+              ]
+            },
+            {
+              "id": "meridian",
+              "title": "Meridian Careers",
+              "items": [
+                "Second board",
+                "Same safe apply flow"
+              ]
+            }
+          ]
+        ],
+        "note": "Two agents negotiate, then a safe helper applies on the career boards."
+      }
     }
   ],
   "settings": [

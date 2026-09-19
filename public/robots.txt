@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://brenthixlabs.com/sitemap.xml
+Sitemap: https://personel-portfolio-website.vercel.app/sitemap.xml
