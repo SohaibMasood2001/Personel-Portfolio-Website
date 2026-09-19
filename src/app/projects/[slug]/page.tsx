@@ -12,9 +12,9 @@ export async function generateStaticParams() {
   } catch {
     return [
       { slug: "agriconnect" },
-      { slug: "smart-islamic-guider" },
-      { slug: "dualhire" },
       { slug: "modagent" },
+      { slug: "dualhire" },
+      { slug: "smart-islamic-guider" },
       { slug: "medcare-clinic-agent" },
       { slug: "resume-builder-agent" },
       { slug: "linkedin-content-agent" },

@@ -76,99 +76,6 @@ export const catalogProjects: CatalogProject[] = [
     order: 1,
   },
   {
-    title: "Smart Islamic Guider",
-    slug: "smart-islamic-guider",
-    shortDesc:
-      "RAG-powered Islamic QA chatbot trained on Sihah Sitta and the Quran using Python, LangChain, and LLaMA 3 on Groq.",
-    longDesc:
-      "Developed as a semester project at COMSATS University, Smart Islamic Guider provides authentic, context-verified Islamic answers to religious and theological questions. The assistant is trained on authoritative reference texts including the Quran and the Sihah Sitta Hadith collections.\n\nIt utilizes a Retrieval-Augmented Generation (RAG) architecture powered by LangChain and high-speed LLaMA 3 inference on the Groq Cloud API. When a user asks a query, relevant verses and Hadith citations are retrieved through vector embeddings, ensuring responses are grounded directly in authentic sources with zero hallucination.\n\nThe system provides citation references for each answered question, giving users immediate access to verified chapter and verse numbers.",
-    techStack: [
-      "Python",
-      "LangChain",
-      "LLaMA 3",
-      "Groq Cloud API",
-      "RAG",
-      "FAISS",
-      "Hugging Face",
-    ],
-    features: [
-      {
-        title: "RAG over Sihah Sitta & Quran",
-        description:
-          "Semantic vector indexing over authentic Hadith collections and scripture for hallucination-free retrieval.",
-      },
-      {
-        title: "Ultra-Fast Groq Cloud Inference",
-        description:
-          "Sub-second response generation utilizing LLaMA 3 running on Groq's high-speed LPU infrastructure.",
-      },
-      {
-        title: "Precise Citations & Source Proofs",
-        description:
-          "Every generated response links directly to referenced Surah verses or Hadith volume and book numbers.",
-      },
-      {
-        title: "Conversational QA Context",
-        description:
-          "Maintains multi-turn context allowing follow-up queries and clarification on complex theological topics.",
-      },
-    ],
-    screenshots: [],
-    thumbnail: "/thumbs/islamic_guider.png",
-    githubUrl: "https://github.com/sohaibmasood",
-    liveUrl: null,
-    status: "live",
-    featured: true,
-    accentColor: "#D4A853",
-    architectureFallback: "Query → Vector Retrieval (FAISS) → LLaMA 3 (Groq) → Grounded Answer",
-    category: "ai-agent",
-    order: 2,
-  },
-  {
-    title: "DualHire",
-    slug: "dualhire",
-    shortDesc:
-      "Two-sided agentic AI platform where autonomous agents handle candidate search, resume screening, and interview scheduling.",
-    longDesc:
-      "DualHire is an agentic hiring platform where two autonomous AI agents cooperate to complete the hiring cycle. Ava acts on behalf of candidates to format profiles and apply to open roles; Orion represents the hiring team to review qualifications and book interview slots on the company calendar.\n\nThe platform demonstrates real-time agent-to-agent collaboration with audit logs, human confirmation guardrails, and transparent telemetry.",
-    techStack: [
-      "Next.js",
-      "Python",
-      "OpenAI",
-      "Vapi Voice",
-      "Playwright",
-      "SQLite",
-      "SSE",
-    ],
-    features: [
-      {
-        title: "Two-Sided Cooperative Agents",
-        description:
-          "Ava applies for candidate; Orion evaluates fit and coordinates calendar availability.",
-      },
-      {
-        title: "Automated Calendar Scheduling",
-        description:
-          "Finds overlapping availability between candidate and interviewer to book verified meetings.",
-      },
-      {
-        title: "Audit Trail & Step-by-Step Replay",
-        description:
-          "Complete transparency into what actions the agents performed and the reasoning behind each step.",
-      },
-    ],
-    screenshots: [],
-    thumbnail: "/thumbs/dualhire.png",
-    githubUrl: "https://github.com/sohaibmasood",
-    liveUrl: null,
-    status: "live",
-    featured: true,
-    accentColor: "#3B82F6",
-    architectureFallback: "Candidate Agent ↔ Company Screener ↔ Scheduled Interview",
-    category: "ai-agent",
-    order: 3,
-  },
-  {
     title: "ModAgent",
     slug: "modagent",
     shortDesc:
@@ -221,10 +128,103 @@ export const catalogProjects: CatalogProject[] = [
     githubUrl: "https://github.com/sohaibmasood",
     liveUrl: null,
     status: "live",
-    featured: false,
+    featured: true,
     accentColor: "#A855F7",
     architectureFallback: "Desktop app → install tools → GTA V folder",
     category: "desktop",
+    order: 2,
+  },
+  {
+    title: "DualHire",
+    slug: "dualhire",
+    shortDesc:
+      "Two-sided agentic AI platform where autonomous agents handle candidate search, resume screening, and interview scheduling.",
+    longDesc:
+      "DualHire is an agentic hiring platform where two autonomous AI agents cooperate to complete the hiring cycle. Ava acts on behalf of candidates to format profiles and apply to open roles; Orion represents the hiring team to review qualifications and book interview slots on the company calendar.\n\nThe platform demonstrates real-time agent-to-agent collaboration with audit logs, human confirmation guardrails, and transparent telemetry.",
+    techStack: [
+      "Next.js",
+      "Python",
+      "OpenAI",
+      "Vapi Voice",
+      "Playwright",
+      "SQLite",
+      "SSE",
+    ],
+    features: [
+      {
+        title: "Two-Sided Cooperative Agents",
+        description:
+          "Ava applies for candidate; Orion evaluates fit and coordinates calendar availability.",
+      },
+      {
+        title: "Automated Calendar Scheduling",
+        description:
+          "Finds overlapping availability between candidate and interviewer to book verified meetings.",
+      },
+      {
+        title: "Audit Trail & Step-by-Step Replay",
+        description:
+          "Complete transparency into what actions the agents performed and the reasoning behind each step.",
+      },
+    ],
+    screenshots: [],
+    thumbnail: "/thumbs/dualhire.png",
+    githubUrl: "https://github.com/sohaibmasood",
+    liveUrl: null,
+    status: "live",
+    featured: true,
+    accentColor: "#3B82F6",
+    architectureFallback: "Candidate Agent ↔ Company Screener ↔ Scheduled Interview",
+    category: "ai-agent",
+    order: 3,
+  },
+  {
+    title: "Smart Islamic Guider",
+    slug: "smart-islamic-guider",
+    shortDesc:
+      "RAG-powered Islamic QA chatbot trained on Sihah Sitta and the Quran using Python, LangChain, and LLaMA 3 on Groq.",
+    longDesc:
+      "Developed as a semester project at COMSATS University, Smart Islamic Guider provides authentic, context-verified Islamic answers to religious and theological questions. The assistant is trained on authoritative reference texts including the Quran and the Sihah Sitta Hadith collections.\n\nIt utilizes a Retrieval-Augmented Generation (RAG) architecture powered by LangChain and high-speed LLaMA 3 inference on the Groq Cloud API. When a user asks a query, relevant verses and Hadith citations are retrieved through vector embeddings, ensuring responses are grounded directly in authentic sources with zero hallucination.\n\nThe system provides citation references for each answered question, giving users immediate access to verified chapter and verse numbers.",
+    techStack: [
+      "Python",
+      "LangChain",
+      "LLaMA 3",
+      "Groq Cloud API",
+      "RAG",
+      "FAISS",
+      "Hugging Face",
+    ],
+    features: [
+      {
+        title: "RAG over Sihah Sitta & Quran",
+        description:
+          "Semantic vector indexing over authentic Hadith collections and scripture for hallucination-free retrieval.",
+      },
+      {
+        title: "Ultra-Fast Groq Cloud Inference",
+        description:
+          "Sub-second response generation utilizing LLaMA 3 running on Groq's high-speed LPU infrastructure.",
+      },
+      {
+        title: "Precise Citations & Source Proofs",
+        description:
+          "Every generated response links directly to referenced Surah verses or Hadith volume and book numbers.",
+      },
+      {
+        title: "Conversational QA Context",
+        description:
+          "Maintains multi-turn context allowing follow-up queries and clarification on complex theological topics.",
+      },
+    ],
+    screenshots: [],
+    thumbnail: "/thumbs/islamic_guider.png",
+    githubUrl: "https://github.com/sohaibmasood",
+    liveUrl: null,
+    status: "live",
+    featured: true,
+    accentColor: "#D4A853",
+    architectureFallback: "Query → Vector Retrieval (FAISS) → LLaMA 3 (Groq) → Grounded Answer",
+    category: "ai-agent",
     order: 4,
   },
   {
@@ -331,7 +331,7 @@ export const catalogProjects: CatalogProject[] = [
     githubUrl: "https://github.com/sohaibmasood",
     liveUrl: null,
     status: "live",
-    featured: false,
+    featured: true,
     accentColor: "#F59E0B",
     architectureFallback: "Upload profile → fill resume → export PDF",
     category: "desktop",

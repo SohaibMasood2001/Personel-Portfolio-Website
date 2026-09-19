@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "sohaib-masood-portfolio",
-  "exportedAt": "2026-09-19T11:08:54.215Z",
+  "exportedAt": "2026-09-19T11:15:25.719Z",
   "note": "Import this JSON into any database. projects.techStack, features, screenshots, and guardrails are arrays. siteContent.data is already parsed JSON. For the Prisma SQLite schema, stringify techStack, features, screenshots, guardrails, and architecture, and stringify siteContent.data.",
   "projects": [
     {
@@ -152,51 +152,134 @@
       }
     },
     {
-      "title": "Smart Islamic Guider",
-      "slug": "smart-islamic-guider",
-      "shortDesc": "RAG-powered Islamic QA chatbot trained on Sihah Sitta and the Quran using Python, LangChain, and LLaMA 3 on Groq.",
-      "longDesc": "Developed as a semester project at COMSATS University, Smart Islamic Guider provides authentic, context-verified Islamic answers to religious and theological questions. The assistant is trained on authoritative reference texts including the Quran and the Sihah Sitta Hadith collections.\n\nIt utilizes a Retrieval-Augmented Generation (RAG) architecture powered by LangChain and high-speed LLaMA 3 inference on the Groq Cloud API. When a user asks a query, relevant verses and Hadith citations are retrieved through vector embeddings, ensuring responses are grounded directly in authentic sources with zero hallucination.\n\nThe system provides citation references for each answered question, giving users immediate access to verified chapter and verse numbers.",
+      "title": "ModAgent",
+      "slug": "modagent",
+      "shortDesc": "Desktop app that installs GTA V mods carefully — with a full backup, dependency checks, and a clear history before each change.",
+      "longDesc": "ModAgent is a desktop app for installing GTA V mods without the usual guesswork. You drop in a pack; the app checks the game folder, scans the package, then installs by type — vehicles, characters, maps, scripts, audio, and more.\n\nEvery change follows a careful path: backup, plan, write, verify, then record history. Uninstall restores only what ModAgent touched, so your game folder stays tidy. Legacy and Enhanced editions stay separate, so the wrong edition fails fast instead of corrupting files.\n\nSafety gates matter for players. Package scans, dependency checks, map overlap warnings, and config checks run before writes. Online play is blocked while a loader is active. The result is a reliable install engine you can trust — and that other helper apps can reuse.",
       "techStack": [
-        "Python",
-        "LangChain",
-        "LLaMA 3",
-        "Groq Cloud API",
-        "RAG",
-        "FAISS",
-        "Hugging Face"
+        "Electron",
+        "React",
+        ".NET 8",
+        "Agent tools",
+        "CodeWalker.Core",
+        "Game file tools",
+        "OpenRouter"
       ],
       "features": [
         {
-          "title": "RAG over Sihah Sitta & Quran",
-          "description": "Semantic vector indexing over authentic Hadith collections and scripture for hallucination-free retrieval."
+          "title": "Careful, file-level installs",
+          "description": "Changes only the files that need updating — not whole shared packs — so installs stay precise and easier to reverse."
         },
         {
-          "title": "Ultra-Fast Groq Cloud Inference",
-          "description": "Sub-second response generation utilizing LLaMA 3 running on Groq's high-speed LPU infrastructure."
+          "title": "Full category coverage",
+          "description": "Scripts, maps, audio, injectors, configs, frameworks, and save-game mods each get tools that match how that content lands in the game."
         },
         {
-          "title": "Precise Citations & Source Proofs",
-          "description": "Every generated response links directly to referenced Surah verses or Hadith volume and book numbers."
+          "title": "Safety gates before write",
+          "description": "Package scan, dependency checks, map overlap, and config checks run first. Online play is blocked while a loader is on."
         },
         {
-          "title": "Conversational QA Context",
-          "description": "Maintains multi-turn context allowing follow-up queries and clarification on complex theological topics."
+          "title": "Shared install engine",
+          "description": "Backups, indexes, and a clear history live in one engine. Other helper apps can reuse the same install path."
+        },
+        {
+          "title": "Legacy and Enhanced editions",
+          "description": "Separate indexes and adapters keep editions apart. Targeting the wrong edition fails fast instead of writing bad files."
+        },
+        {
+          "title": "Confirm, then verify",
+          "description": "Backup, plan, write, verify. Uninstall stays narrow. Save mods use a separate backup store so progress files stay protected."
         }
       ],
       "screenshots": [],
-      "thumbnail": "/thumbs/islamic_guider.png",
+      "thumbnail": "/thumbs/modagent.png",
       "githubUrl": null,
       "liveUrl": null,
       "status": "live",
       "featured": true,
-      "accentColor": "#D4A853",
-      "architectureFallback": "Query → Vector Retrieval (FAISS) → LLaMA 3 (Groq) → Grounded Answer",
-      "category": "ai-agent",
+      "accentColor": "#A855F7",
+      "architectureFallback": "Desktop app → install tools → GTA V folder",
+      "category": "desktop",
       "order": 2,
       "demoVideoUrl": null,
       "proofAsset": null,
-      "guardrails": [],
-      "architecture": "Query → Vector Retrieval (FAISS) → LLaMA 3 (Groq) → Grounded Answer"
+      "guardrails": [
+        "staged-write",
+        "human-confirm",
+        "audit-ledger",
+        "resumable"
+      ],
+      "architecture": {
+        "title": "How ModAgent works",
+        "layers": [
+          [
+            {
+              "id": "electron",
+              "title": "Desktop app",
+              "items": [
+                "Drop in a mod pack",
+                "Review the plan first"
+              ]
+            },
+            {
+              "id": "mcp-client",
+              "title": "Shared tools",
+              "items": [
+                "Same install engine",
+                "Works in the app or helper clients"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "detect",
+              "title": "Check the game",
+              "items": [
+                "Find the GTA install",
+                "Look up structure by category",
+                "Scan the package first"
+              ]
+            },
+            {
+              "id": "apply",
+              "title": "Install carefully",
+              "items": [
+                "Category tools (map, audio, injector, save)",
+                "Snapshot the plan",
+                "Write only what is needed"
+              ]
+            },
+            {
+              "id": "verify",
+              "title": "Confirm",
+              "items": [
+                "Verify paths and archives",
+                "Ledger for narrow uninstall",
+                "Block Online if a loader is on"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "mods-folder",
+              "title": "Mod folder",
+              "items": [
+                "Most files land in mods/",
+                "Save mods use a separate backup store"
+              ]
+            },
+            {
+              "id": "rpf-dlc",
+              "title": "Game packs and root",
+              "items": [
+                "Shared archives stay tracked",
+                "Injectors write to game root"
+              ]
+            }
+          ]
+        ],
+        "note": "You always confirm before writes. Backups make undo possible."
+      }
     },
     {
       "title": "DualHire",
@@ -317,134 +400,51 @@
       }
     },
     {
-      "title": "ModAgent",
-      "slug": "modagent",
-      "shortDesc": "Desktop app that installs GTA V mods carefully — with a full backup, dependency checks, and a clear history before each change.",
-      "longDesc": "ModAgent is a desktop app for installing GTA V mods without the usual guesswork. You drop in a pack; the app checks the game folder, scans the package, then installs by type — vehicles, characters, maps, scripts, audio, and more.\n\nEvery change follows a careful path: backup, plan, write, verify, then record history. Uninstall restores only what ModAgent touched, so your game folder stays tidy. Legacy and Enhanced editions stay separate, so the wrong edition fails fast instead of corrupting files.\n\nSafety gates matter for players. Package scans, dependency checks, map overlap warnings, and config checks run before writes. Online play is blocked while a loader is active. The result is a reliable install engine you can trust — and that other helper apps can reuse.",
+      "title": "Smart Islamic Guider",
+      "slug": "smart-islamic-guider",
+      "shortDesc": "RAG-powered Islamic QA chatbot trained on Sihah Sitta and the Quran using Python, LangChain, and LLaMA 3 on Groq.",
+      "longDesc": "Developed as a semester project at COMSATS University, Smart Islamic Guider provides authentic, context-verified Islamic answers to religious and theological questions. The assistant is trained on authoritative reference texts including the Quran and the Sihah Sitta Hadith collections.\n\nIt utilizes a Retrieval-Augmented Generation (RAG) architecture powered by LangChain and high-speed LLaMA 3 inference on the Groq Cloud API. When a user asks a query, relevant verses and Hadith citations are retrieved through vector embeddings, ensuring responses are grounded directly in authentic sources with zero hallucination.\n\nThe system provides citation references for each answered question, giving users immediate access to verified chapter and verse numbers.",
       "techStack": [
-        "Electron",
-        "React",
-        ".NET 8",
-        "Agent tools",
-        "CodeWalker.Core",
-        "Game file tools",
-        "OpenRouter"
+        "Python",
+        "LangChain",
+        "LLaMA 3",
+        "Groq Cloud API",
+        "RAG",
+        "FAISS",
+        "Hugging Face"
       ],
       "features": [
         {
-          "title": "Careful, file-level installs",
-          "description": "Changes only the files that need updating — not whole shared packs — so installs stay precise and easier to reverse."
+          "title": "RAG over Sihah Sitta & Quran",
+          "description": "Semantic vector indexing over authentic Hadith collections and scripture for hallucination-free retrieval."
         },
         {
-          "title": "Full category coverage",
-          "description": "Scripts, maps, audio, injectors, configs, frameworks, and save-game mods each get tools that match how that content lands in the game."
+          "title": "Ultra-Fast Groq Cloud Inference",
+          "description": "Sub-second response generation utilizing LLaMA 3 running on Groq's high-speed LPU infrastructure."
         },
         {
-          "title": "Safety gates before write",
-          "description": "Package scan, dependency checks, map overlap, and config checks run first. Online play is blocked while a loader is on."
+          "title": "Precise Citations & Source Proofs",
+          "description": "Every generated response links directly to referenced Surah verses or Hadith volume and book numbers."
         },
         {
-          "title": "Shared install engine",
-          "description": "Backups, indexes, and a clear history live in one engine. Other helper apps can reuse the same install path."
-        },
-        {
-          "title": "Legacy and Enhanced editions",
-          "description": "Separate indexes and adapters keep editions apart. Targeting the wrong edition fails fast instead of writing bad files."
-        },
-        {
-          "title": "Confirm, then verify",
-          "description": "Backup, plan, write, verify. Uninstall stays narrow. Save mods use a separate backup store so progress files stay protected."
+          "title": "Conversational QA Context",
+          "description": "Maintains multi-turn context allowing follow-up queries and clarification on complex theological topics."
         }
       ],
       "screenshots": [],
-      "thumbnail": "/thumbs/modagent.png",
+      "thumbnail": "/thumbs/islamic_guider.png",
       "githubUrl": null,
       "liveUrl": null,
       "status": "live",
-      "featured": false,
-      "accentColor": "#A855F7",
-      "architectureFallback": "Desktop app → install tools → GTA V folder",
-      "category": "desktop",
+      "featured": true,
+      "accentColor": "#D4A853",
+      "architectureFallback": "Query → Vector Retrieval (FAISS) → LLaMA 3 (Groq) → Grounded Answer",
+      "category": "ai-agent",
       "order": 4,
       "demoVideoUrl": null,
       "proofAsset": null,
-      "guardrails": [
-        "staged-write",
-        "human-confirm",
-        "audit-ledger",
-        "resumable"
-      ],
-      "architecture": {
-        "title": "How ModAgent works",
-        "layers": [
-          [
-            {
-              "id": "electron",
-              "title": "Desktop app",
-              "items": [
-                "Drop in a mod pack",
-                "Review the plan first"
-              ]
-            },
-            {
-              "id": "mcp-client",
-              "title": "Shared tools",
-              "items": [
-                "Same install engine",
-                "Works in the app or helper clients"
-              ]
-            }
-          ],
-          [
-            {
-              "id": "detect",
-              "title": "Check the game",
-              "items": [
-                "Find the GTA install",
-                "Look up structure by category",
-                "Scan the package first"
-              ]
-            },
-            {
-              "id": "apply",
-              "title": "Install carefully",
-              "items": [
-                "Category tools (map, audio, injector, save)",
-                "Snapshot the plan",
-                "Write only what is needed"
-              ]
-            },
-            {
-              "id": "verify",
-              "title": "Confirm",
-              "items": [
-                "Verify paths and archives",
-                "Ledger for narrow uninstall",
-                "Block Online if a loader is on"
-              ]
-            }
-          ],
-          [
-            {
-              "id": "mods-folder",
-              "title": "Mod folder",
-              "items": [
-                "Most files land in mods/",
-                "Save mods use a separate backup store"
-              ]
-            },
-            {
-              "id": "rpf-dlc",
-              "title": "Game packs and root",
-              "items": [
-                "Shared archives stay tracked",
-                "Injectors write to game root"
-              ]
-            }
-          ]
-        ],
-        "note": "You always confirm before writes. Backups make undo possible."
-      }
+      "guardrails": [],
+      "architecture": "Query → Vector Retrieval (FAISS) → LLaMA 3 (Groq) → Grounded Answer"
     },
     {
       "title": "MedCare Clinic",
@@ -610,7 +610,7 @@
       "githubUrl": null,
       "liveUrl": null,
       "status": "live",
-      "featured": false,
+      "featured": true,
       "accentColor": "#F59E0B",
       "architectureFallback": "Upload profile → fill resume → export PDF",
       "category": "desktop",
@@ -1202,7 +1202,7 @@
         },
         {
           "question": "What projects have you built?",
-          "answer": "Key projects include AgriConnect (agriculture marketplace with deep learning disease detection), Smart Islamic Guider (RAG over Quran & Hadith), DualHire (two-agent agentic hiring platform), and MedCare Clinic."
+          "answer": "Key projects include AgriConnect (agriculture marketplace with deep learning disease detection), ModAgent (desktop mod install agent), DualHire (two-agent agentic hiring platform), Smart Islamic Guider (RAG over Quran & Hadith), MedCare Clinic, and Resume Studio."
         },
         {
           "question": "Are you available for contract or full-time roles?",
@@ -1319,7 +1319,7 @@
         "paragraphs": [
           "I am an AI Engineer based in Islamabad, Pakistan, specializing in Generative AI, Agentic Systems, and intelligent automation. My work spans building real-time voice agents, multi-agent pipelines, RAG-based chatbots, and fine-tuning domain-specific models — turning advanced AI research into production-ready systems.",
           "Currently at Octathorn Technologies as an AI Automation Engineer, I design agentic AI solutions using OpenAI, Vapi, Claude MCP, LangChain, UiPath, and n8n. I am also running a full fine-tuning pipeline for PP-OCRv4 on a 24K-image custom font dataset — from data preprocessing and model training through evaluation and export.",
-          "I graduated with a BS in Software Engineering from COMSATS University (CGPA 3.21). My portfolio includes AgriConnect (deep learning crop disease detection + marketplace), Smart Islamic Guider (LLaMA 3 RAG over Quran & Hadith), DualHire (two-agent agentic hiring platform), and MedCare Clinic."
+          "I graduated with a BS in Software Engineering from COMSATS University (CGPA 3.21). My portfolio includes AgriConnect (deep learning crop disease detection + marketplace), ModAgent (desktop mod install agent), DualHire (two-agent agentic hiring platform), Smart Islamic Guider (LLaMA 3 RAG over Quran & Hadith), MedCare Clinic, and Resume Studio."
         ]
       }
     },
