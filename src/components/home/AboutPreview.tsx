@@ -91,7 +91,7 @@ export function AboutPreview() {
                   </div>
                   <div className="flex justify-between py-1">
                     <span className="text-text-secondary font-mono">Primary Tech</span>
-                    <span className="font-semibold text-text-primary">LangChain, OpenAI, Vapi, Claude MCP</span>
+                    <span className="font-semibold text-text-primary">Claude (MCP), PP-OCRv4, Vapi, n8n</span>
                   </div>
                   <div className="flex justify-between py-1">
                     <span className="text-text-secondary font-mono">Education</span>

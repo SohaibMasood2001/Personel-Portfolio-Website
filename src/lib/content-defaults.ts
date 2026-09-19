@@ -71,7 +71,7 @@ export const defaultServices: ServiceData[] = [
     icon: "Workflow",
     title: "LLM, RAG & Fine-Tuning",
     description:
-      "Build high-precision RAG systems with LangChain, LLaMA 3, FAISS, and vector search. Fine-tune domain-specific models — including OCR models like PP-OCRv4 on custom image datasets.",
+      "Build high-precision RAG systems with Claude MCP, DeepSeek R1, FAISS, and vector search. Fine-tune domain-specific models — including custom OCR models like PP-OCRv4 on custom font datasets.",
     accent: "#D4A853",
   },
   {
@@ -140,7 +140,7 @@ export const defaultWhyUs: WhyUsData[] = [
     icon: "Brain",
     title: "LLM & Fine-Tuning Depth",
     description:
-      "From RAG pipelines with FAISS and LangChain to full model fine-tuning pipelines (PP-OCRv4, DeepSeek R1) on domain-specific datasets.",
+      "From advanced RAG pipelines with Claude MCP and vector retrieval to full model fine-tuning pipelines (PP-OCRv4, DeepSeek R1) on domain-specific datasets.",
   },
   {
     icon: "Cpu",
@@ -184,12 +184,12 @@ export const defaultFaqs: FaqData[] = [
   {
     question: "What are your core technical specializations?",
     answer:
-      "My primary expertise is Agentic AI, Generative AI, LLM Engineering, and AI Automation. I work hands-on with OpenAI models, Vapi voice AI, LangChain, Claude MCP, UiPath RPA, and n8n workflow automation.",
+      "My primary expertise is Agentic AI, Generative AI, LLM Engineering, and AI Automation. I work hands-on with Claude (MCP & Agents), Vapi real-time voice AI, PP-OCRv4 custom OCR fine-tuning, n8n advanced workflows, and UiPath RPA.",
   },
   {
     question: "Have you worked on model training and fine-tuning?",
     answer:
-      "Yes. I am currently fine-tuning PP-OCRv4 on a custom 24K-image dataset of specific font styles, running the full pipeline from data preprocessing, model training, and evaluation to production-ready export. I have also fine-tuned DeepSeek R1 on 250K medical consultation records.",
+      "Yes. I am currently fine-tuning PP-OCRv4 on a custom 24K-image dataset of specific font styles, running the full pipeline from data preprocessing, model training, and evaluation to production-ready export. I have also worked with DeepSeek R1 reasoning and fine-tuning pipelines.",
   },
   {
     question: "What projects have you built?",
@@ -205,11 +205,11 @@ export const defaultFaqs: FaqData[] = [
 
 export const defaultTechAdvanced: TechItemData[] = [
   { name: "Python", color: "#3776AB" },
-  { name: "LangChain", color: "#E8536A" },
+  { name: "Claude 3.7 / MCP", color: "#D97706" },
   { name: "OpenAI", color: "#10B981" },
   { name: "Vapi Voice AI", color: "#D4A853" },
-  { name: "LLaMA 3", color: "#8B5CF6" },
-  { name: "DeepSeek R1", color: "#3B82F6" },
+  { name: "DeepSeek R1 / V3", color: "#3B82F6" },
+  { name: "PP-OCRv4 / OCR", color: "#E8536A" },
   { name: "Transformers", color: "#FBBF24" },
   { name: "FastAPI", color: "#009688" },
   { name: "Node.js", color: "#339933" },
@@ -219,8 +219,8 @@ export const defaultTechAdvanced: TechItemData[] = [
 
 export const defaultTechShipping: TechItemData[] = [
   { name: "Claude MCP", color: "#D97706" },
-  { name: "UiPath RPA", color: "#FA4616" },
   { name: "n8n Workflows", color: "#EA4B71" },
+  { name: "UiPath RPA", color: "#FA4616" },
   { name: "PaddleOCR / PP-OCRv4", color: "#E8536A" },
   { name: "FAISS & Vector DBs", color: "#EC4899" },
   { name: "Playwright", color: "#2EAD33" },
@@ -240,7 +240,7 @@ export const defaultHeroTitles: string[] = [
 export const defaultAboutStory: AboutStoryData = {
   paragraphs: [
     "I am an AI Engineer based in Islamabad, Pakistan, specializing in Generative AI, Agentic Systems, and intelligent automation. My work spans building real-time voice agents, multi-agent pipelines, RAG-based chatbots, and fine-tuning domain-specific models — turning advanced AI research into production-ready systems.",
-    "Currently at Octathorn Technologies as an AI Automation Engineer, I design agentic AI solutions using OpenAI, Vapi, Claude MCP, LangChain, UiPath, and n8n. I am also running a full fine-tuning pipeline for PP-OCRv4 on a 24K-image custom font dataset — from data preprocessing and model training through evaluation and export.",
+    "Currently at Octathorn Technologies as an AI Automation Engineer, I design agentic AI systems using Claude (MCP & agent tool calling), Vapi real-time voice agents, custom OCR fine-tuning (PP-OCRv4), n8n workflow orchestration, and UiPath RPA. I am also running a full fine-tuning pipeline for PP-OCRv4 on a 24K-image custom font dataset — from data preprocessing and model training through evaluation and export.",
     "I graduated with a BS in Software Engineering from COMSATS University (CGPA 3.21). My portfolio includes AgriConnect (deep learning crop disease detection + marketplace), ModAgent (desktop mod install agent), DualHire (two-agent agentic hiring platform), Smart Islamic Guider (LLaMA 3 RAG over Quran & Hadith), MedCare Clinic, and Resume Studio.",
   ],
 };
@@ -266,7 +266,7 @@ export const defaultAboutMilestones: MilestoneData[] = [
     year: "Jan 2025 – Apr 2025",
     title: "Python Developer Intern — Eziline Software House",
     description:
-      "Built LLM chatbots with LangChain & LLaMA 3, integrated RAG pipelines and FAISS vector search, deployed NLP and disease detection models via Flask APIs.",
+      "Built intelligent LLM applications and RAG pipelines with Claude, DeepSeek, and FAISS vector search, deployed NLP and computer vision models via Flask APIs.",
     icon: "Code",
     accent: "#1B2A4A",
   },

@@ -513,12 +513,12 @@ export const catalogSettings: { key: string; value: string }[] = [
   {
     key: "hero_subtitle",
     value:
-      "AI Engineer & Generative AI Specialist designing and deploying agentic AI systems, real-time voice agents, and intelligent automation pipelines.",
+      "AI Engineer & Generative AI Specialist designing and deploying agentic AI systems, real-time voice agents, Claude MCP, custom OCR, and intelligent automation pipelines.",
   },
   {
     key: "about_text",
     value:
-      "AI Engineer specializing in Generative AI, agentic workflows, LLM fine-tuning, and production automation. Experienced in building voice agents, multi-agent systems, and connecting LLMs to enterprise APIs.",
+      "AI Engineer specializing in Generative AI, agentic workflows, Claude MCP, custom OCR fine-tuning (PP-OCRv4), and advanced automation pipelines with Vapi and n8n.",
   },
   { key: "github_url", value: "https://github.com/sohaibmasood" },
   { key: "linkedin_url", value: "https://www.linkedin.com/in/sohaib-masood-ab3315279/" },

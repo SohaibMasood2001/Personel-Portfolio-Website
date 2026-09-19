@@ -38,7 +38,7 @@ const experiences: ExperienceItem[] = [
       "Currently fine-tuning PP-OCRv4 on a custom 24K-image dataset of specific font styles — running the full training pipeline from data preprocessing, model training, and evaluation to deployment-ready export.",
       "Set up logging, retry logic, and production monitoring so AI services stay reliable under real workloads.",
     ],
-    techTags: ["OpenAI", "Vapi", "Claude MCP", "LangChain", "UiPath", "n8n", "RAG", "PP-OCRv4", "PaddleOCR"],
+    techTags: ["Claude (MCP & Agents)", "Vapi Voice AI", "n8n Workflows", "PP-OCRv4 / Custom OCR", "UiPath RPA", "OpenAI", "Multi-Agent Pipelines", "PaddleOCR"],
   },
   {
     role: "Automation Engineer Intern",
@@ -62,12 +62,12 @@ const experiences: ExperienceItem[] = [
     type: "work",
     badge: "LLM & RAG",
     highlights: [
-      "Built LLM-based chatbots and intelligent web applications using LangChain, LLaMA 3, and Hugging Face Transformers.",
+      "Built intelligent LLM applications and modern conversational systems using Claude, DeepSeek R1, FAISS vector search, and Hugging Face Transformers.",
       "Integrated RAG pipelines and FAISS vector search to power domain-specific document QA chatbots.",
       "Deployed deep learning inference models for NLP tasks (classification, NER, speech) via Flask REST APIs.",
       "Built disease detection classifiers using Keras/TensorFlow as part of applied ML experimentation.",
     ],
-    techTags: ["LangChain", "LLaMA 3", "Hugging Face", "FAISS", "Flask", "Transformers", "Keras"],
+    techTags: ["Claude & DeepSeek", "RAG Systems", "Hugging Face", "FAISS", "Flask", "Transformers", "Keras"],
   },
   {
     role: "BS Software Engineering",

@@ -10,13 +10,13 @@ const codeTabs = [
     label: "voice_agent_pipeline.py",
     language: "python",
     lines: [
-      { num: 1, tokens: [{ text: "import ", color: "text-[#E8536A]" }, { text: "vapi, openai, langchain", color: "text-[#38BDF8]" }] },
+      { num: 1, tokens: [{ text: "import ", color: "text-[#E8536A]" }, { text: "vapi, anthropic, mcp_agent", color: "text-[#38BDF8]" }] },
       { num: 2, tokens: [{ text: "from ", color: "text-[#E8536A]" }, { text: "aws_bedrock ", color: "text-[#38BDF8]" }, { text: "import ", color: "text-[#E8536A]" }, { text: "BedrockRuntime", color: "text-[#D4A853]" }] },
       { num: 3, tokens: [{ text: "", color: "text-text-primary" }] },
       { num: 4, tokens: [{ text: "class ", color: "text-[#E8536A]" }, { text: "VoiceAgentEngine", color: "text-[#D4A853]" }, { text: ":", color: "text-text-primary" }] },
       { num: 5, tokens: [{ text: "    def __init__(self, model=\"deepseek-r1\"):", color: "text-text-secondary" }] },
       { num: 6, tokens: [{ text: "        self.voice = vapi.Client()", color: "text-[#34D399]" }] },
-      { num: 7, tokens: [{ text: "        self.rag = LangChainRAG(vector_db=\"FAISS\")", color: "text-[#34D399]" }] },
+      { num: 7, tokens: [{ text: "        self.mcp = ClaudeMCPClient(tools=SYSTEM_TOOLS)", color: "text-[#34D399]" }] },
       { num: 8, tokens: [{ text: "", color: "text-text-primary" }] },
       { num: 9, tokens: [{ text: "    async def dispatch_consultation(self, query):", color: "text-[#D4A853]" }] },
       { num: 10, tokens: [{ text: "        context = await self.rag.retrieve(query)", color: "text-[#F472B6]" }] },
@@ -43,7 +43,7 @@ const codeTabs = [
 const floatingBadges = [
   { label: "Agentic AI & Vapi Voice", x: "-8%", y: "-12%", delay: 0.2, color: "from-[#E8536A]/20 to-[#D4A853]/10" },
   { label: "Python & Django REST", x: "82%", y: "-8%", delay: 0.4, color: "from-[#D4A853]/20 to-[#E8536A]/10" },
-  { label: "LangChain & Claude MCP", x: "78%", y: "88%", delay: 0.6, color: "from-[#10B981]/20 to-[#38BDF8]/10" },
+  { label: "Claude MCP & n8n Workflows", x: "78%", y: "88%", delay: 0.6, color: "from-[#10B981]/20 to-[#38BDF8]/10" },
   { label: "UiPath & Playwright RPA", x: "-6%", y: "84%", delay: 0.8, color: "from-[#38BDF8]/20 to-[#818CF8]/10" },
 ];
 

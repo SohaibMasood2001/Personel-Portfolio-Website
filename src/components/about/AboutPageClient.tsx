@@ -10,14 +10,14 @@ import type { AboutStoryData, MilestoneData } from "@/lib/content-defaults";
 
 const skillCategories = [
   {
-    title: "Primary: AI & Agent Frameworks",
+    title: "Primary: Agentic AI & Modern LLMs",
     icon: Brain,
     skills: [
-      { name: "LangChain & RAG Pipelines", level: 94 },
-      { name: "OpenAI Models & DeepSeek R1", level: 92 },
-      { name: "Vapi Voice Agent Framework", level: 90 },
-      { name: "Claude Model Context Protocol (MCP)", level: 88 },
-      { name: "Hugging Face & Transformers", level: 86 },
+      { name: "Claude 3.7 / 3.5 & Model Context Protocol (MCP)", level: 96 },
+      { name: "Custom OCR Fine-Tuning (PP-OCRv4 / PaddleOCR)", level: 94 },
+      { name: "Vapi Real-Time Voice Agents & Tool Calling", level: 92 },
+      { name: "DeepSeek R1 / V3 & Reasoning Engines", level: 92 },
+      { name: "Advanced RAG & Vector Retrieval (FAISS)", level: 90 },
     ],
   },
   {
@@ -27,19 +27,19 @@ const skillCategories = [
       { name: "Python & Django REST", level: 96 },
       { name: "FastAPI & Flask", level: 88 },
       { name: "JavaScript / TypeScript / Next.js", level: 88 },
-      { name: "SQL & MySQL", level: 86 },
-      { name: "C++ & PHP", level: 78 },
+      { name: "SQL & PostgreSQL / MySQL", level: 86 },
+      { name: "C++ & Modern Web APIs", level: 80 },
     ],
   },
   {
-    title: "Intelligent Automation & RPA",
+    title: "Intelligent Automation & Advanced Workflows",
     icon: Server,
     skills: [
-      { name: "Playwright Browser Automation", level: 94 },
-      { name: "UiPath Robotic Process Automation", level: 92 },
-      { name: "n8n Low-Code Workflows", level: 90 },
-      { name: "Document Classification & LLM Reasoning", level: 88 },
-      { name: "Guardrails & Structured Outputs", level: 86 },
+      { name: "n8n Advanced Automation Workflows", level: 95 },
+      { name: "UiPath Robotic Process Automation (RPA)", level: 93 },
+      { name: "Playwright Browser Automation", level: 92 },
+      { name: "Document Classification & LLM OCR", level: 90 },
+      { name: "Guardrails & Multi-Agent Orchestration", level: 88 },
     ],
   },
   {
