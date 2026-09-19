@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Used on Vercel + Neon. Local development keeps prisma/schema.prisma (SQLite).
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Project {
+  id           String   @id @default(cuid())
+  title        String
+  slug         String   @unique
+  shortDesc    String
+  longDesc     String
+  techStack    String // JSON array string
+  features     String // JSON array string
+  screenshots  String   @default("[]") // JSON array of file paths
+  thumbnail    String? // small card-preview image path/URL
+  githubUrl    String?
+  liveUrl      String?
+  demoVideoUrl String? // desktop-only / non-live demos
+  proofAsset   String? // screenshot/GIF of a real write (ledger, PDF, cart)
+  guardrails   String   @default("[]") // JSON string[] e.g. staged-write
+  status       String   @default("live") // live | development
+  featured     Boolean  @default(false)
+  accentColor  String   @default("#7C3AED")
+  architecture String? // Markdown content
+  category     String   @default("ai-agent") // ai-agent | desktop | web | automation | ml
+  order        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Setting {
+  id    String @id @default(cuid())
+  key   String @unique
+  value String
+}
+
+model SiteContent {
+  id        String   @id @default(cuid())
+  section   String   @unique
+  data      String
+  updatedAt DateTime @updatedAt
+}

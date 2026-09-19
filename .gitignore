@@ -1,0 +1,116 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env
+.env.local
+.env.*.local
+.env.vercel
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# uploads (user content)
+/public/uploads/*
+!/public/uploads/.gitkeep
+
+# sqlite
+prisma/dev.db
+prisma/dev.db-journal
+
+# CMS MCP exports
+prisma/content-export.json
+mcp/exports/
+mcp/node_modules/
+mcp/dist/
+
+
+# Reference / Non-project directories (DO NOT COMMIT)
+Agentic Portfolio Website/
+"Agentic Portfolio Website"
+Agentic Portfolio Website
+
+# Python & Local Scripts
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+venv/
+.venv/
+env/
+scripts/test_*.py
+data/photo.png
+
+# Databases & SQLite
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+prisma/*.db
+prisma/*.db-journal
+
+# OS & Editor Artifacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.pem
+*.key
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+
+# Debug Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local audit / security pass artifacts
+SECURITY-FIXES.md
+SECURITY-AUDIT*.md
+**/SECURITY-FIXES.md
+emergent-security-prompts*.pdf
+.audit/
+audit-out/
+**/audit-out/
+shots-out/
+**/shots-out/
