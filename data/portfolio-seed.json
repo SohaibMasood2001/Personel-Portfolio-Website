@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "sohaib-masood-portfolio",
-  "exportedAt": "2026-09-19T10:18:25.827Z",
+  "exportedAt": "2026-09-19T10:55:56.288Z",
   "note": "Import this JSON into any database. projects.techStack, features, screenshots, and guardrails are arrays. siteContent.data is already parsed JSON. For the Prisma SQLite schema, stringify techStack, features, screenshots, guardrails, and architecture, and stringify siteContent.data.",
   "projects": [
     {
@@ -409,6 +409,713 @@
           ]
         ],
         "note": "Two agents negotiate, then a safe helper applies on the career boards."
+      }
+    },
+    {
+      "title": "ModAgent",
+      "slug": "modagent",
+      "shortDesc": "Desktop app that installs GTA V mods carefully — with a full backup, dependency checks, and a clear history before each change.",
+      "longDesc": "ModAgent is a desktop app for installing GTA V mods without the usual guesswork. You drop in a pack; the app checks the game folder, scans the package, then installs by type — vehicles, characters, maps, scripts, audio, and more.\n\nEvery change follows a careful path: backup, plan, write, verify, then record history. Uninstall restores only what ModAgent touched, so your game folder stays tidy. Legacy and Enhanced editions stay separate, so the wrong edition fails fast instead of corrupting files.\n\nSafety gates matter for players. Package scans, dependency checks, map overlap warnings, and config checks run before writes. Online play is blocked while a loader is active. The result is a reliable install engine you can trust — and that other helper apps can reuse.",
+      "techStack": [
+        "Electron",
+        "React",
+        ".NET 8",
+        "Agent tools",
+        "CodeWalker.Core",
+        "Game file tools",
+        "OpenRouter"
+      ],
+      "features": [
+        {
+          "title": "Careful, file-level installs",
+          "description": "Changes only the files that need updating — not whole shared packs — so installs stay precise and easier to reverse."
+        },
+        {
+          "title": "Full category coverage",
+          "description": "Scripts, maps, audio, injectors, configs, frameworks, and save-game mods each get tools that match how that content lands in the game."
+        },
+        {
+          "title": "Safety gates before write",
+          "description": "Package scan, dependency checks, map overlap, and config checks run first. Online play is blocked while a loader is on."
+        },
+        {
+          "title": "Shared install engine",
+          "description": "Backups, indexes, and a clear history live in one engine. Other helper apps can reuse the same install path."
+        },
+        {
+          "title": "Legacy and Enhanced editions",
+          "description": "Separate indexes and adapters keep editions apart. Targeting the wrong edition fails fast instead of writing bad files."
+        },
+        {
+          "title": "Confirm, then verify",
+          "description": "Backup, plan, write, verify. Uninstall stays narrow. Save mods use a separate backup store so progress files stay protected."
+        }
+      ],
+      "screenshots": [],
+      "thumbnail": "/thumbs/modagent.png",
+      "githubUrl": null,
+      "liveUrl": null,
+      "status": "live",
+      "featured": false,
+      "accentColor": "#A855F7",
+      "architectureFallback": "Desktop app → install tools → GTA V folder",
+      "category": "desktop",
+      "order": 6,
+      "demoVideoUrl": null,
+      "proofAsset": null,
+      "guardrails": [
+        "staged-write",
+        "human-confirm",
+        "audit-ledger",
+        "resumable"
+      ],
+      "architecture": {
+        "title": "How ModAgent works",
+        "layers": [
+          [
+            {
+              "id": "electron",
+              "title": "Desktop app",
+              "items": [
+                "Drop in a mod pack",
+                "Review the plan first"
+              ]
+            },
+            {
+              "id": "mcp-client",
+              "title": "Shared tools",
+              "items": [
+                "Same install engine",
+                "Works in the app or helper clients"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "detect",
+              "title": "Check the game",
+              "items": [
+                "Find the GTA install",
+                "Look up structure by category",
+                "Scan the package first"
+              ]
+            },
+            {
+              "id": "apply",
+              "title": "Install carefully",
+              "items": [
+                "Category tools (map, audio, injector, save)",
+                "Snapshot the plan",
+                "Write only what is needed"
+              ]
+            },
+            {
+              "id": "verify",
+              "title": "Confirm",
+              "items": [
+                "Verify paths and archives",
+                "Ledger for narrow uninstall",
+                "Block Online if a loader is on"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "mods-folder",
+              "title": "Mod folder",
+              "items": [
+                "Most files land in mods/",
+                "Save mods use a separate backup store"
+              ]
+            },
+            {
+              "id": "rpf-dlc",
+              "title": "Game packs and root",
+              "items": [
+                "Shared archives stay tracked",
+                "Injectors write to game root"
+              ]
+            }
+          ]
+        ],
+        "note": "You always confirm before writes. Backups make undo possible."
+      }
+    },
+    {
+      "title": "MedCare Clinic",
+      "slug": "medcare-clinic-agent",
+      "shortDesc": "A clinic phone assistant that checks symptoms, handles refills, and books the doctor on the same call.",
+      "longDesc": "MedCare is a phone-first clinic assistant for patients who would rather talk than fill a long web form. Someone calls, confirms who they are, and the assistant sorts the request — book a visit, request a refill, or describe symptoms.\n\nOn the same call it can run a symptom check, book or move a visit with the right doctor, apply refill rules from the clinic table, and send a short alert so the desk is ready. A person steps in when the situation needs judgment; the assistant does not invent prescriptions or invent facts.\n\nRecords stay tied to the caller through a secure link between the clinic system and the voice line. That keeps the conversation useful and the patient identity consistent from first ring to saved note.",
+      "techStack": [
+        "Django",
+        "Python",
+        "scikit-learn",
+        "Voice assistant",
+        "Clinic access key",
+        "SQLite",
+        "Optional LLM"
+      ],
+      "features": [
+        {
+          "title": "Phone-first patient flow",
+          "description": "Patients describe symptoms and needs on a call instead of wrestling with a long intake form — natural for older patients and busy parents."
+        },
+        {
+          "title": "Symptom check on the line",
+          "description": "The clinic model maps spoken symptoms to a likely condition while the patient is still on the call, so triage starts immediately."
+        },
+        {
+          "title": "Medicine and refill rules",
+          "description": "Refills follow the clinic table. The assistant never invents a script or overrides what the practice already approved."
+        },
+        {
+          "title": "Book or move the visit",
+          "description": "Find a slot with the right doctor and confirm it while the patient is still on the line — no callback limbo."
+        },
+        {
+          "title": "Doctor and desk alert",
+          "description": "A short summary reaches the clinic desk so staff know what was discussed and what was booked before the patient arrives."
+        },
+        {
+          "title": "Caller stays the patient",
+          "description": "Clinic and voice systems share a secure link. Records stay tied to the phone on the call so identity does not drift mid-conversation."
+        }
+      ],
+      "screenshots": [],
+      "thumbnail": "/thumbs/medcare.png",
+      "githubUrl": null,
+      "liveUrl": null,
+      "status": "live",
+      "featured": false,
+      "accentColor": "#14B8A6",
+      "architectureFallback": "Phone call → clinic assistant → saved records",
+      "category": "ai-agent",
+      "order": 7,
+      "demoVideoUrl": null,
+      "proofAsset": null,
+      "guardrails": [
+        "staged-write",
+        "human-confirm",
+        "audit-ledger"
+      ],
+      "architecture": {
+        "title": "How MedCare works",
+        "layers": [
+          [
+            {
+              "id": "call-in",
+              "title": "Patient calls",
+              "items": [
+                "Phone the clinic line",
+                "Say what you need"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "triage",
+              "title": "Understand the need",
+              "items": [
+                "Confirm who is calling",
+                "Bind phone to patient",
+                "Sort book, refill, or symptoms"
+              ]
+            },
+            {
+              "id": "care-actions",
+              "title": "Help on the call",
+              "items": [
+                "Suggest next steps",
+                "Book or move a visit",
+                "Secure clinic access"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "calendar",
+              "title": "Appointments",
+              "items": [
+                "Open slots",
+                "Bookings saved"
+              ]
+            },
+            {
+              "id": "pharmacy",
+              "title": "Medicine",
+              "items": [
+                "Refill requests",
+                "Medicine list"
+              ]
+            },
+            {
+              "id": "notes",
+              "title": "Clinic notes",
+              "items": [
+                "Past visit context",
+                "Simple lookup for staff"
+              ]
+            }
+          ]
+        ],
+        "note": "Voice in, clear clinic actions out. A person stays in the loop when it matters."
+      }
+    },
+    {
+      "title": "Resume Studio",
+      "slug": "resume-builder-agent",
+      "shortDesc": "Drop a profile file in, watch the resume fill on the page section by section, then export a print-ready PDF.",
+      "longDesc": "Resume Studio turns a structured profile into a finished resume you can see and export. You upload a metadata file with name, school, jobs, and skills. The page fills section by section so you watch the document itself take shape — not a chat transcript pretending to be a CV.\n\nWhen the layout looks right, export a clean, print-ready PDF. Candidate profiles stay available between sessions, so returning users pick up where they left off instead of re-entering everything.\n\nThe product began as a Semester 3 Java Swing project with PDF export and database storage, then grew through later course work. Polish can improve wording; it cannot invent employers or dates. That keeps the resume honest for recruiters and safe for the candidate.",
+      "techStack": [
+        "Java",
+        "Swing",
+        "iText PDF",
+        "SQLite",
+        "Maven",
+        "FastAPI"
+      ],
+      "features": [
+        {
+          "title": "Profile file upload",
+          "description": "Drop a metadata file and map identity, school, jobs, and skills onto the resume canvas in one pass."
+        },
+        {
+          "title": "Live resume preview",
+          "description": "The page fills section by section as fields arrive, so you judge the real document — not a chat log."
+        },
+        {
+          "title": "Print-ready PDF export",
+          "description": "Export a clean multi-section resume suitable for printing or attaching to applications."
+        },
+        {
+          "title": "Saved profiles",
+          "description": "Candidate data stays available between sessions so return visits are edits, not a full restart."
+        },
+        {
+          "title": "Facts stay frozen",
+          "description": "Wording can be polished, but employers and dates cannot be invented. That keeps every export trustworthy."
+        },
+        {
+          "title": "Secure admin access",
+          "description": "Admin login comes from secure settings so studio management stays protected outside the public builder flow."
+        }
+      ],
+      "screenshots": [],
+      "thumbnail": "/thumbs/resume.png",
+      "githubUrl": null,
+      "liveUrl": null,
+      "status": "live",
+      "featured": false,
+      "accentColor": "#F59E0B",
+      "architectureFallback": "Upload profile → fill resume → export PDF",
+      "category": "desktop",
+      "order": 8,
+      "demoVideoUrl": null,
+      "proofAsset": null,
+      "guardrails": [
+        "staged-write",
+        "audit-ledger"
+      ],
+      "architecture": {
+        "title": "How Resume Studio works",
+        "layers": [
+          [
+            {
+              "id": "upload",
+              "title": "Start fresh",
+              "items": [
+                "Bring in your profile info",
+                "Skills, jobs, school"
+              ]
+            },
+            {
+              "id": "reload",
+              "title": "Open saved",
+              "items": [
+                "Reload a past profile",
+                "Keep editing later"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "parse",
+              "title": "Organize",
+              "items": [
+                "Split into clear sections",
+                "Keep data in sync"
+              ]
+            },
+            {
+              "id": "preview",
+              "title": "Live preview",
+              "items": [
+                "See the resume update live",
+                "Pick a simple layout"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "sql-out",
+              "title": "Save",
+              "items": [
+                "Store your profile",
+                "Come back anytime"
+              ]
+            },
+            {
+              "id": "pdf-out",
+              "title": "Export",
+              "items": [
+                "Download a clean PDF",
+                "Ready to share"
+              ]
+            }
+          ]
+        ],
+        "note": "Add your info, preview live, save, and export a PDF."
+      }
+    },
+    {
+      "title": "LinkedIn Content Agent",
+      "slug": "linkedin-content-agent",
+      "shortDesc": "Multi-pass LinkedIn post drafts you review and approve — no auto-publish.",
+      "longDesc": "LinkedIn Content Agent is a multi-step writing helper for professionals who want strong posts without handing over the publish button. You start from a topic brief; the pipeline produces a first draft, then a polish pass for tone, hooks, hashtags, and preview, then a ready package on disk.\n\nYou can kick off a run from a schedule, a webhook, or a simple command. Every package lands for human review. There is no auto-publish to LinkedIn — you choose when (and whether) to post.\n\nThat design keeps the assistant useful and the brand safe. Start requests need a shared secret, model keys stay private, and invented statistics are out of bounds. The result is a reliable draft factory that still leaves the final LinkedIn action with you.",
+      "techStack": [
+        "n8n",
+        "Python runner",
+        "OpenRouter / LLM",
+        "SQLite history",
+        "Webhook starter"
+      ],
+      "features": [
+        {
+          "title": "Topic brief to structured draft",
+          "description": "Feed a brief and get a structured post back. The pipeline does not invent statistics or claim results you never provided."
+        },
+        {
+          "title": "Separate writing passes",
+          "description": "Generate, tighten, and add hashtags in distinct steps you can review — so each pass has a clear job."
+        },
+        {
+          "title": "Ready package on disk",
+          "description": "Finished posts land as a reviewable package with preview-ready content, not a one-shot dump into a chat window."
+        },
+        {
+          "title": "Human-gated publish",
+          "description": "Nothing goes live on LinkedIn automatically. You own the final post action after you approve the draft."
+        },
+        {
+          "title": "Flexible start options",
+          "description": "Kick off from a schedule, a webhook, or a simple command so the pipeline fits how your team already works."
+        },
+        {
+          "title": "Protected starts and private keys",
+          "description": "Start requests need a shared secret. Model keys stay private. The pipeline drafts; you publish."
+        }
+      ],
+      "screenshots": [],
+      "thumbnail": "/thumbs/linkedin.png",
+      "githubUrl": null,
+      "liveUrl": null,
+      "status": "live",
+      "featured": false,
+      "accentColor": "#0A66C2",
+      "architectureFallback": "Brief → writing pipeline → ready post",
+      "category": "automation",
+      "order": 9,
+      "demoVideoUrl": null,
+      "proofAsset": null,
+      "guardrails": [
+        "staged-write",
+        "audit-ledger"
+      ],
+      "architecture": {
+        "title": "How the content agent works",
+        "layers": [
+          [
+            {
+              "id": "manual-brief",
+              "title": "You start",
+              "items": [
+                "Give a topic",
+                "Optional tone notes"
+              ]
+            },
+            {
+              "id": "schedule",
+              "title": "Timed start",
+              "items": [
+                "Runs on a schedule",
+                "Same writing steps"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "draft",
+              "title": "First draft",
+              "items": [
+                "Write a rough post",
+                "Shape the length"
+              ]
+            },
+            {
+              "id": "polish",
+              "title": "Polish",
+              "items": [
+                "Fix tone and hooks",
+                "Add hashtags",
+                "Show a preview"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "package",
+              "title": "Ready to post",
+              "items": [
+                "Copy-ready text",
+                "You choose when to publish",
+                "Webhook needs a shared secret"
+              ]
+            }
+          ]
+        ],
+        "note": "You stay in control of the final publish."
+      }
+    },
+    {
+      "title": "Online Makeup Store",
+      "slug": "online-makeup-store",
+      "shortDesc": "Cosmetics storefront with an AI shopping helper that suggests cart items and only adds them after you confirm — with live stock checks.",
+      "longDesc": "Online Makeup Store is a cosmetics storefront with a familiar catalog, cart, and checkout — plus a shopping helper that suggests products without taking over the bag. The helper prepares picks; cart changes happen only after you confirm.\n\nInventory stays honest. Out-of-stock adds are refused, so the assistant cannot promise what the shelf does not have. Helper sessions expire, and admin pages plus cart changes need a signed-in user.\n\nThat design is the point: an assistant that speeds discovery while the shopper keeps final say. There is one inventory and one cart — the same storefront a human would use — so suggestions never invent a parallel shop with different stock.",
+      "techStack": [
+        "Laravel",
+        "Blade",
+        "SQLite",
+        "Shopping helper",
+        "Secure session link",
+        "OpenAI-compatible LLM"
+      ],
+      "features": [
+        {
+          "title": "Product catalog",
+          "description": "Browse listings with category and detail pages so shoppers find shades and kits the way they expect on a modern beauty store."
+        },
+        {
+          "title": "Cart and checkout",
+          "description": "One storefront cart shared by the human shopper and the helper. No second inventory and no shadow checkout."
+        },
+        {
+          "title": "Suggest, then confirm",
+          "description": "The helper prepares product picks; nothing lands in the cart until you approve — discovery without surprise adds."
+        },
+        {
+          "title": "Stock-aware suggestions",
+          "description": "Out-of-stock adds are refused. The assistant cannot put unavailable items in the bag or promise what is not on the shelf."
+        },
+        {
+          "title": "Expiring helper sessions",
+          "description": "Helper sessions time out so an old suggestion thread cannot quietly change the cart later without a fresh, intentional start."
+        },
+        {
+          "title": "Signed-in cart and admin",
+          "description": "Admin pages and cart changes need a signed-in user. Private settings stay protected while the shop floor stays open for browsing."
+        }
+      ],
+      "screenshots": [],
+      "thumbnail": "/thumbs/makeup.png",
+      "githubUrl": null,
+      "liveUrl": null,
+      "status": "live",
+      "featured": false,
+      "accentColor": "#EC4899",
+      "architectureFallback": "Shop website → helper suggests → you confirm → cart",
+      "category": "web",
+      "order": 10,
+      "demoVideoUrl": null,
+      "proofAsset": null,
+      "guardrails": [
+        "staged-write",
+        "human-confirm",
+        "audit-ledger"
+      ],
+      "architecture": {
+        "title": "How the makeup store works",
+        "layers": [
+          [
+            {
+              "id": "browse",
+              "title": "Browse",
+              "items": [
+                "See products",
+                "Open details"
+              ]
+            },
+            {
+              "id": "cart-ui",
+              "title": "Cart",
+              "items": [
+                "Change quantities",
+                "Start checkout"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "listing",
+              "title": "Store pages",
+              "items": [
+                "Product list and detail",
+                "Cart in the session"
+              ]
+            },
+            {
+              "id": "checkout",
+              "title": "Checkout",
+              "items": [
+                "Fill the order form",
+                "See confirmation",
+                "Auth required for cart"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "products-db",
+              "title": "Product records",
+              "items": [
+                "Stock and prices",
+                "Customer accounts"
+              ]
+            },
+            {
+              "id": "orders-db",
+              "title": "Order records",
+              "items": [
+                "Orders and line items",
+                "Admin routes role-locked"
+              ]
+            }
+          ]
+        ],
+        "note": "Browse → helper suggests → you confirm → checkout → saved order."
+      }
+    },
+    {
+      "title": "Airline Reservation System",
+      "slug": "airline-reservation-system",
+      "shortDesc": "Airline booking site. Search flights, book seats, manage reservations, download PDF tickets.",
+      "longDesc": "Airline Reservation System is a complete booking website for travellers who need a clear path from search to ticket. Visitors search sample flights by route or airline, choose seats, and book with passenger details and passport upload.\n\nAfter booking, travellers can list, edit, or delete reservations and download a PDF ticket for travel day. Contact messages are stored safely for the operations team. Email is logged locally so the site runs cleanly without depending on an external mail server.\n\nForms are validated and uploads stay in protected storage. Mail and related settings come from secure configuration. The product delivers a complete booking path — search, book, manage, and walk away with a ticket in hand.",
+      "techStack": [
+        "Laravel 10",
+        "Blade",
+        "Bootstrap",
+        "PDF tickets",
+        "SQLite"
+      ],
+      "features": [
+        {
+          "title": "Flight search",
+          "description": "Search sample flights by airline, departure, or destination so travellers find a workable option quickly."
+        },
+        {
+          "title": "Seat booking with passenger details",
+          "description": "Book with airline selection, passenger information, and passport upload in one guided flow."
+        },
+        {
+          "title": "Manage reservations",
+          "description": "List, edit, and delete bookings after the fact so plans can change without starting over from scratch."
+        },
+        {
+          "title": "PDF ticket download",
+          "description": "Download a printable PDF ticket after booking — ready for travel day or emailing to a companion."
+        },
+        {
+          "title": "Contact messages stored safely",
+          "description": "Traveller questions land in protected storage for the operations team instead of vanishing into an unmonitored inbox."
+        },
+        {
+          "title": "Validated forms and private uploads",
+          "description": "Forms are validated before save. Passport and file uploads stay in protected storage. Mail settings come from secure config so the site runs without a live mail server."
+        }
+      ],
+      "screenshots": [],
+      "thumbnail": "/thumbs/airline.png",
+      "githubUrl": null,
+      "liveUrl": null,
+      "demoVideoUrl": null,
+      "proofAsset": null,
+      "guardrails": [],
+      "status": "live",
+      "featured": false,
+      "accentColor": "#0EA5E9",
+      "architectureFallback": "Search → book → manage → PDF ticket",
+      "category": "web",
+      "order": 11,
+      "architecture": {
+        "title": "How airline booking works",
+        "layers": [
+          [
+            {
+              "id": "landing",
+              "title": "Site",
+              "items": [
+                "Home and offers",
+                "Flight search"
+              ]
+            },
+            {
+              "id": "book-ui",
+              "title": "Booking form",
+              "items": [
+                "Passenger details",
+                "Passport upload"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "laravel",
+              "title": "Booking app",
+              "items": [
+                "Validate + save booking",
+                "Contact messages",
+                "PDF ticket"
+              ]
+            },
+            {
+              "id": "manage",
+              "title": "Manage bookings",
+              "items": [
+                "List / edit / delete",
+                "Download ticket"
+              ]
+            }
+          ],
+          [
+            {
+              "id": "sqlite",
+              "title": "Saved records",
+              "items": [
+                "Flights",
+                "Bookings",
+                "Contacts"
+              ]
+            },
+            {
+              "id": "storage",
+              "title": "Private files",
+              "items": [
+                "Passport uploads",
+                "Generated PDFs"
+              ]
+            }
+          ]
+        ],
+        "note": "Search → book → manage → PDF ticket."
       }
     }
   ],

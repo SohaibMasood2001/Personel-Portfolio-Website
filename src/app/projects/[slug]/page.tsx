@@ -16,6 +16,12 @@ export async function generateStaticParams() {
       { slug: "smart-islamic-guider" },
       { slug: "ai-automation-suite" },
       { slug: "dualhire" },
+      { slug: "modagent" },
+      { slug: "medcare-clinic-agent" },
+      { slug: "resume-builder-agent" },
+      { slug: "linkedin-content-agent" },
+      { slug: "online-makeup-store" },
+      { slug: "airline-reservation-system" },
     ];
   }
 }
