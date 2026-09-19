@@ -194,7 +194,7 @@ export const defaultFaqs: FaqData[] = [
   {
     question: "What projects have you built?",
     answer:
-      "Key projects include AgriConnect (agriculture marketplace with deep learning disease detection), Smart AI Doctor (medical LLM chatbot with voice synthesis), Smart Islamic Guider (RAG over Quran & Hadith), and DualHire (two-agent agentic hiring platform).",
+      "Key projects include AgriConnect (agriculture marketplace with deep learning disease detection), Smart Islamic Guider (RAG over Quran & Hadith), DualHire (two-agent agentic hiring platform), and MedCare Clinic.",
   },
   {
     question: "Are you available for contract or full-time roles?",
@@ -241,7 +241,7 @@ export const defaultAboutStory: AboutStoryData = {
   paragraphs: [
     "I am an AI Engineer based in Islamabad, Pakistan, specializing in Generative AI, Agentic Systems, and intelligent automation. My work spans building real-time voice agents, multi-agent pipelines, RAG-based chatbots, and fine-tuning domain-specific models — turning advanced AI research into production-ready systems.",
     "Currently at Octathorn Technologies as an AI Automation Engineer, I design agentic AI solutions using OpenAI, Vapi, Claude MCP, LangChain, UiPath, and n8n. I am also running a full fine-tuning pipeline for PP-OCRv4 on a 24K-image custom font dataset — from data preprocessing and model training through evaluation and export.",
-    "I graduated with a BS in Software Engineering from COMSATS University (CGPA 3.21). My portfolio includes AgriConnect (deep learning crop disease detection + marketplace), Smart AI Doctor (DeepSeek R1 medical chatbot with voice synthesis), Smart Islamic Guider (LLaMA 3 RAG over Quran & Hadith), and DualHire (two-agent agentic hiring platform).",
+    "I graduated with a BS in Software Engineering from COMSATS University (CGPA 3.21). My portfolio includes AgriConnect (deep learning crop disease detection + marketplace), Smart Islamic Guider (LLaMA 3 RAG over Quran & Hadith), DualHire (two-agent agentic hiring platform), and MedCare Clinic.",
   ],
 };
 

@@ -76,55 +76,6 @@ export const catalogProjects: CatalogProject[] = [
     order: 1,
   },
   {
-    title: "Smart AI Doctor",
-    slug: "smart-ai-doctor",
-    shortDesc:
-      "LLM-based medical consultation chatbot trained on 250K doctor-patient interactions with DeepSeek R1 & voice synthesis.",
-    longDesc:
-      "Smart AI Doctor is an intelligent healthcare assistant designed to streamline preliminary medical consultations and patient triage. Trained on a curated dataset of over 250,000 real-world doctor-patient interactions, it leverages DeepSeek R1 reasoning to evaluate symptoms and formulate structured clinical summaries.\n\nTo ensure complete accessibility, the application integrates bidirectional speech synthesis — speech-to-text input so patients can describe concerns naturally, and realistic text-to-speech output explaining potential diagnoses and recommended precautions.\n\nThe system includes strict safety boundaries, ensuring it never prescribes controlled medication while providing reliable guidance before clinical visits.",
-    techStack: [
-      "Python",
-      "DeepSeek R1",
-      "Speech-to-Text",
-      "Text-to-Speech",
-      "LangChain",
-      "FastAPI",
-      "Transformers",
-    ],
-    features: [
-      {
-        title: "Trained on 250K Medical Consultations",
-        description:
-          "Fine-tuned reasoning engine capable of understanding diverse symptom descriptions and nuanced patient histories.",
-      },
-      {
-        title: "Voice-Driven Consultation (STT / TTS)",
-        description:
-          "Hands-free conversational interaction allowing elderly or vision-impaired patients to describe ailments naturally.",
-      },
-      {
-        title: "Clinical Triage & Symptom Evaluation",
-        description:
-          "Maps spoken complaints into prioritized severity tiers and structured visit summaries for healthcare staff.",
-      },
-      {
-        title: "Safety Boundaries & Disclaimers",
-        description:
-          "Enforces rigorous guardrails against self-medication and flags high-risk emergencies immediately.",
-      },
-    ],
-    screenshots: [],
-    thumbnail: "/thumbs/medcare.png",
-    githubUrl: "https://github.com/sohaibmasood",
-    liveUrl: null,
-    status: "live",
-    featured: true,
-    accentColor: "#0EA5E9",
-    architectureFallback: "Voice Input → DeepSeek R1 Engine → Structured Clinical Triage",
-    category: "ai-agent",
-    order: 2,
-  },
-  {
     title: "Smart Islamic Guider",
     slug: "smart-islamic-guider",
     shortDesc:
@@ -171,57 +122,7 @@ export const catalogProjects: CatalogProject[] = [
     accentColor: "#D4A853",
     architectureFallback: "Query → Vector Retrieval (FAISS) → LLaMA 3 (Groq) → Grounded Answer",
     category: "ai-agent",
-    order: 3,
-  },
-  {
-    title: "AI Automation Suite",
-    slug: "ai-automation-suite",
-    shortDesc:
-      "Agentic AI automation infrastructure combining voice agents, multi-agent pipelines, Claude MCP integrations, UiPath RPA, and n8n workflows.",
-    longDesc:
-      "A production-grade AI automation infrastructure built to eliminate manual work and speed up business decision-making. The suite combines multiple automation paradigms: real-time voice agents using OpenAI and Vapi for live conversations with tool calling; multi-agent decision pipelines where AI agents coordinate APIs and business platforms; and Claude MCP integrations that give agents secure, standardised access to enterprise data sources.\n\nOn the RPA side, UiPath handles deterministic desktop and document workflows, while n8n orchestrates low-code pipelines connecting cloud services and APIs end-to-end. LLM reasoning layers on top of RPA for intelligent document classification and exception handling where rules alone are not enough.\n\nRAG pipelines, structured outputs, and guardrails keep all agent behaviour accurate and production-safe, with logging and retry logic built in from day one.",
-    techStack: [
-      "OpenAI",
-      "Vapi",
-      "Claude MCP",
-      "LangChain",
-      "UiPath",
-      "n8n",
-      "RAG",
-      "Python",
-    ],
-    features: [
-      {
-        title: "Real-Time Voice Agents",
-        description:
-          "Live conversation agents built with OpenAI models and Vapi, handling tool calling and low-latency speech interactions.",
-      },
-      {
-        title: "Multi-Agent Decision Pipelines",
-        description:
-          "Coordinate multiple AI agents, APIs, and business platforms to automate complex decision workflows with minimal human intervention.",
-      },
-      {
-        title: "Claude MCP Enterprise Integration",
-        description:
-          "Secure, standardised agent access to enterprise tools and data sources via the Model Context Protocol.",
-      },
-      {
-        title: "Intelligent RPA & n8n Orchestration",
-        description:
-          "Combine deterministic UiPath RPA with LLM reasoning for smart document processing and business workflow automation.",
-      },
-    ],
-    screenshots: [],
-    thumbnail: "/thumbs/automation.png",
-    githubUrl: "https://github.com/sohaibmasood",
-    liveUrl: null,
-    status: "live",
-    featured: true,
-    accentColor: "#E8536A",
-    architectureFallback: "Voice Agent / MCP / n8n → LLM Reasoning → UiPath RPA → Business Platform",
-    category: "automation",
-    order: 4,
+    order: 2,
   },
   {
     title: "DualHire",
@@ -261,11 +162,11 @@ export const catalogProjects: CatalogProject[] = [
     githubUrl: "https://github.com/sohaibmasood",
     liveUrl: null,
     status: "live",
-    featured: false,
+    featured: true,
     accentColor: "#3B82F6",
     architectureFallback: "Candidate Agent ↔ Company Screener ↔ Scheduled Interview",
     category: "ai-agent",
-    order: 5,
+    order: 3,
   },
   {
     title: "ModAgent",
@@ -324,7 +225,7 @@ export const catalogProjects: CatalogProject[] = [
     accentColor: "#A855F7",
     architectureFallback: "Desktop app → install tools → GTA V folder",
     category: "desktop",
-    order: 6,
+    order: 4,
   },
   {
     title: "MedCare Clinic",
@@ -379,11 +280,11 @@ export const catalogProjects: CatalogProject[] = [
     githubUrl: "https://github.com/sohaibmasood",
     liveUrl: null,
     status: "live",
-    featured: false,
+    featured: true,
     accentColor: "#14B8A6",
     architectureFallback: "Phone call → clinic assistant → saved records",
     category: "ai-agent",
-    order: 7,
+    order: 5,
   },
   {
     title: "Resume Studio",
@@ -434,7 +335,7 @@ export const catalogProjects: CatalogProject[] = [
     accentColor: "#F59E0B",
     architectureFallback: "Upload profile → fill resume → export PDF",
     category: "desktop",
-    order: 8,
+    order: 6,
   },
   {
     title: "LinkedIn Content Agent",
@@ -490,7 +391,7 @@ export const catalogProjects: CatalogProject[] = [
     accentColor: "#0A66C2",
     architectureFallback: "Brief → writing pipeline → ready post",
     category: "automation",
-    order: 9,
+    order: 7,
   },
   {
     title: "Online Makeup Store",
@@ -548,7 +449,7 @@ export const catalogProjects: CatalogProject[] = [
     accentColor: "#EC4899",
     architectureFallback: "Shop website → helper suggests → you confirm → cart",
     category: "web",
-    order: 10,
+    order: 8,
   },
   {
     title: "Airline Reservation System",
@@ -602,7 +503,7 @@ export const catalogProjects: CatalogProject[] = [
     accentColor: "#0EA5E9",
     architectureFallback: "Search → book → manage → PDF ticket",
     category: "web",
-    order: 11,
+    order: 9,
   },
 ];
 
