@@ -9,7 +9,7 @@ import { GlassCard } from "@/components/ui/GlassCard";
 const highlights = [
   "Agentic AI systems & real-time voice agents using Vapi and OpenAI",
   "Automated decision pipelines & Claude Model Context Protocol (MCP)",
-  "Full model fine-tuning (PP-OCRv4 on 24K font images, DeepSeek R1)",
+  "Vision Model Fine-Tuning & Custom Datasets",
   "Robotic process automation with UiPath and low-code n8n workflows",
 ];
 
@@ -91,7 +91,7 @@ export function AboutPreview() {
                   </div>
                   <div className="flex justify-between py-1">
                     <span className="text-text-secondary font-mono">Primary Tech</span>
-                    <span className="font-semibold text-text-primary">Claude (MCP), PP-OCRv4, Vapi, n8n</span>
+                    <span className="font-semibold text-text-primary">Claude (MCP), Computer Vision, Vapi, n8n</span>
                   </div>
                   <div className="flex justify-between py-1">
                     <span className="text-text-secondary font-mono">Education</span>

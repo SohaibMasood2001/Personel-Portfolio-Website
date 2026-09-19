@@ -250,7 +250,7 @@ export function HeroSection({
               transition={{ delay: 0.8, duration: 0.6 }}
               className="text-text-primary/90 text-base md:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed font-normal"
             >
-              Designing and deploying agentic AI systems, real-time voice agents, and intelligent automation pipelines with Claude (MCP & Agents), Vapi, custom OCR (PP-OCRv4), n8n workflows, and Python.
+              Designing and deploying agentic AI systems, real-time voice agents, and intelligent automation pipelines with Claude (MCP & Agents), Vapi, Computer Vision, n8n workflows, and Python.
             </motion.p>
 
             <motion.div

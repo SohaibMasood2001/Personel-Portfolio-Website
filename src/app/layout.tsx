@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Sohaib Masood",
   },
   description:
-    "Sohaib Masood — AI Engineer & Generative AI Specialist specializing in agentic AI systems, real-time voice agents, Claude MCP, custom OCR fine-tuning (PP-OCRv4), n8n workflows, and intelligent automation pipelines.",
+    "Sohaib Masood — AI Engineer & Generative AI Specialist specializing in agentic AI systems, real-time voice agents, Claude MCP, Computer Vision & Vision Model fine-tuning, n8n workflows, and intelligent automation pipelines.",
   keywords: [
     "Sohaib Masood",
     "AI Engineer",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "Claude MCP",
     "Claude 3.7",
     "DeepSeek R1",
-    "PP-OCRv4",
+    "Computer Vision",
     "Custom OCR Fine-Tuning",
     "UiPath RPA",
     "n8n Workflows",
